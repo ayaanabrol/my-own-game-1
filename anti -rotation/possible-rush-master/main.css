@@ -1,0 +1,112 @@
+body{
+  width: 100%;
+  height: 100%;
+  font-family: 'Calibri', Helvetica, Arial, Sans-Serif;
+  overflow: hidden;
+}
+.block{
+  width: 80px;
+  height: 80px;
+  background-image: url('cube.png');
+  background-size: contain;
+  bottom: 50px;
+  left: 50%;
+  margin-left: -40px;
+  position: fixed;
+  transform: rotateZ(45deg);
+  border-radius: 1px;
+  transition: .2s;
+  z-index: 99;
+}
+
+
+body{
+  background-color: rgba(53, 70, 117, 0.795);
+}
+#falling_ball{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    margin-left: -20px;
+    transition: .2s;
+    z-index: 98;
+}
+#scoreboard{
+  position: fixed;
+  right: 20;
+}
+#icon{
+  position: fixed;
+  left: 20;
+  top: 12px;
+}
+h3{
+  padding: 0px;
+  margin: 0px;
+}
+.hidden, .hidden2{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: -100%;
+  transition: .4s;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.score-panel{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  transition: .4s;
+  left: 0;
+  background-color: rgba(255, 255, 255, .9);
+}
+#inner{
+  margin-top: 120px;
+  border: 0px;
+}
+
+#resume{
+  width: 60%;
+  height: 50px;
+  border: 0px;
+  background-color: rgb(25, 167, 131);
+  text-transform: uppercase;
+  color: rgb(0, 0, 0);
+}
+
+
+.no-margin{
+  margin: 0px;
+  padding: 0px;
+}
+
+.username-field{
+  position: fixed;
+  top: 50px;
+  left: 20px;
+  max-width: 50%;
+  align-items: center;
+}
+
+#username{
+  text-transform: capitalize;
+  float: right;
+  color: #969696;
+  font-size: .8em;
+}
+
+.pause-field{
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  background-color: rgba(0, 255, 255, .2);
+}
+
+.pause{
+  border: 0px;
+  font-size: .9em;
+}

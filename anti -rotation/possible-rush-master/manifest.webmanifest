@@ -1,0 +1,15 @@
+{
+  "name": "Diamond game ",
+  "start_url": "/possible-rush",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#fff",
+  "background_color": "#fff",
+  "icons": [
+    {
+      "src": "cube.png",
+      "sizes": "300x300",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+<html>
+<head>
+<link rel='manifest' href='manifest.webmanifest'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=no'>
+<title>Possible Rush</title>
+<link rel='stylesheet' href='main.css'>
+</head>
+<script>
+ if('serviceWorker' in navigator){
+    navigator.serviceWorker.register('sw.js');
+    console.log('[Service Worker] SW installed');
+}else{
+    console.warn('[Service Worker] SW not supported');
+}
+</script>
+<body class="body light">
+<center>
+<div id='icon'>
+<img src='icon.png' width='100px'>
+</div>
+<div id='scoreboard' class='scoreboard light'>
+<small>Score</small>
+<h3>
+<span id='scoreBox'>0</span>
+</h3>
+</div>
+
+<div id='lifeboard' class='lifeboard light'>
+<small>Lives</small>
+<h3>
+<span id='lifeBox'>3</span>
+</h3>
+</div>
+
+<div class='block' onclick='rotate(90, event)'></div>
+<div id="tokenDiv">
+<div class='echo dark'></div>
+</div>
+
+<div class='hidden light'>
+<fieldset id='inner' class="light">
+
+<h4>HIGH SCORE</h4>
+<h1><b><span id='new-score'></span></b></h1>
+
+<br>
+<small style='opacity: .6'>OLD HIGH SCORE<br><span id='old-score'></span></small>
+<br><br><br>
+<button id='resume' onclick='resumeGame()'>PLAY AGAIN</button>
+</fieldset>
+</div>
+
+
+
+<div class='hidden2 light'>
+<fieldset id='inner' class="light">
+
+<h4>OUT OF LIVES</h4>
+<h1><b><span id='new-score_one'></span></b></h1>
+ 
+<br>
+<small style='opacity: .6'>HIGH SCORE<br><span id='old-score_one'></span></small>
+<br><br><br>
+<button id='resume' onclick='resumeGameFromDeath()'>PLAY AGAIN</button>
+</fieldset>
+</div>
+</center>
+
+
+
+<div class='username-field light'>
+  <p class='no-margin' id='username'>Username</p>
+</div>
+
+<div class='pause-field light'>
+  <button class='pause light' onclick="handlePause(event)">Pause</button>
+</div>
+
+</body>
+
+<audio id='audio'>
+  <source src="droplet2.mp3" type="audio/mpeg">
+</audio>
+
+<audio id='audio2'>
+  <source src="hammer3.mp3" type="audio/mpeg">
+</audio>
+
+<script src="name-gen.js"></script>
+<script src='main.js'></script>
+</html>
